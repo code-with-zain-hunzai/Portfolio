@@ -18,9 +18,11 @@ const Hero = () => {
         </span>
         FrontEnd Developer base on pakistan</h1>
       <p className='text-3xl w-[50%] text-center'>I am a FrontEnd Developer from hunza with the 3-4 years of experience.</p>
-      <div className='hero-action'>
-        <div className="hero-connect">connect with me</div>
-        <div className="hero-resume">my resume</div>
+      <div className='hero-action flex items-center gap-6 text-2xl mb-12 font-medium'>
+        <div className="hero-connect px-5 py-3  rounded-full"
+        style={{background:'linear-gradient(267deg, #AD7C25 0.36%, #B923E1 102.06%)'}}
+        >Connect with me</div>
+        <div className="hero-resume px-5 py-3 border rounded-full cursor-pointer hover:border-[#B415FF]">My resume</div>
       </div>
     </div>
   )

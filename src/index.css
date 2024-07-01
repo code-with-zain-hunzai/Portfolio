@@ -13,3 +13,20 @@ body {
     color: white;
     font-family: outfit;
 }
+
+@layer components{
+    .about-skill hr {
+        outline: none;
+        border: none;
+        width: 50%;
+        height: 8PX;
+        border-radius: 50px;
+        background: linear-gradient(264deg, #DF8908 -5.09%, #b415b4 106.28%);
+    }
+    .about-achievements{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 80px;
+    }
+}
