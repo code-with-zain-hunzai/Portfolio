@@ -18,24 +18,24 @@ const About = () => {
                     </div>
                     <div className="about-skills flex flex-col gap-5">
                         <div className="about-skill flex gap-10 items-center transition"><p className='min-w-52 text-xl font-medium'>HTML5 & Css3</p> <hr style={{ width: '80% ' }} /></div>
-                        <div className="about-skill flex gap-10 items-center transition"><p className='min-w-52 text-xl font-medium'>Tailwind css & Bootstrap</p> <hr style={{ width: '75%' }} /></div>
+                        <div className="about-skill flex gap-10 items-center transition"><p className='min-w-52 text-xl font-medium'>Tailwind & Bootstrap</p> <hr style={{ width: '75%' }} /></div>
                         <div className="about-skill flex gap-10 items-center transition"><p className='min-w-52 text-xl font-medium'>Javascript ES6</p> <hr style={{ width: '70%' }} /></div>
                         <div className="about-skill flex gap-10 items-center transition"><p className='min-w-52 text-xl font-medium'>React</p> <hr style={{ width: '65%' }} /></div>
                         <div className="about-skill flex gap-10 items-center transition"><p className='min-w-52 text-xl font-medium'>Next.js</p> <hr style={{ width: '60%' }} /></div>
                     </div>
-                </div> 
+                </div>
             </div>
-            <div className="about-achievements mt-14">
+            <div className="about-achievements">
                 <div className="about-achievement">
                     <h1 className='text-4xl text-center'>3+</h1>
                     <p>YEARS OF EXPERIENCE</p>
                 </div>
-                <hr />
+                <hr className="vertical-hr" />
                 <div className="about-achievement">
                     <h1 className='text-4xl text-center'>20+</h1>
                     <p>PROJECTS COMPLETED</p>
                 </div>
-                <hr />
+                <hr className="vertical-hr" />
                 <div className="about-achievement">
                     <h1 className='text-4xl text-center'>15+</h1>
                     <p>HAPPY CLIENTS</p>

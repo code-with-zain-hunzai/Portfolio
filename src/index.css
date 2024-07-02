@@ -14,7 +14,12 @@ body {
     font-family: outfit;
 }
 
-@layer components{
+@layer components {
+    .about-skill:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+    }
+
     .about-skill hr {
         outline: none;
         border: none;
@@ -23,10 +28,44 @@ body {
         border-radius: 50px;
         background: linear-gradient(264deg, #DF8908 -5.09%, #b415b4 106.28%);
     }
-    .about-achievements{
+
+    .about-achievements {
         display: flex;
         width: 100%;
         justify-content: space-around;
+        align-items: center;
         margin-bottom: 80px;
+        margin-top: 70px;
     }
+
+    .about-achievement:hover{
+        transform: scale(1.12);
+        transition: 0.3s;
+    }
+
+    .about-achievements .vertical-hr {
+        width: 1px;
+        height: 100px;
+        background-color: #fff;
+        transform: rotate(180deg);
+    }
+
+    .about-achievement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        transition: 0.5s;
+    }
+
+    .about-achievement h1 {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        background: linear-gradient(270deg, #DF8908 50.41%, #b415b4B4 90.25%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
 }
