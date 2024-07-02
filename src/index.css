@@ -38,7 +38,7 @@ body {
         margin-top: 70px;
     }
 
-    .about-achievement:hover{
+    .about-achievement:hover {
         transform: scale(1.12);
         transition: 0.3s;
     }
@@ -66,6 +66,53 @@ body {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 80px;
+    }
+
+    .services-format h2 {
+        background: linear-gradient(270deg, #DF8908 50.41%, #b415b4B4 90.25%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .services-format:hover {
+        border: 2px solid #ff00ff;
+        background: linear-gradient(45deg, #3f0028, #583300);
+        transform: scale(1.05);
+        transition: 0.5s;
+    }
+
+    .mywork-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .mywork-container img {
+        box-sizing: border-box;
+        width: 419px;
+        height: 200px;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .mywork-container img:hover {
+        transform: scale(1.10);
+        border: 2px solid fuchsia;
+        transition: 0.3s;
+    }
+
+    .mywork-showmore:hover {
+        gap: 30px;
+        transition: 0.5s;
     }
 
 }
