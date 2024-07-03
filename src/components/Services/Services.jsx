@@ -4,10 +4,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Services = () => {
     return (
-        <div className='services flex flex-col justify-center items-center gap-20 '>
+        <div id='services' className='services flex flex-col justify-center items-center gap-20 '>
             <div className='services-title'>
                 <h1 className='text-4xl font-semibold'>My Services</h1>
-                <img src="" alt="Services Title" />
             </div>
             <div className='services-container'>
                 {ServicesData.map((service, index) => (

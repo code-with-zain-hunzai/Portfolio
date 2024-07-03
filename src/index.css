@@ -115,4 +115,116 @@ body {
         transition: 0.5s;
     }
 
+    .loaction:hover {
+        transform: scale(1.10);
+    }
+
+    .contact-left h1 {
+        font-size: 80px;
+        font-family: 800px;
+        background: linear-gradient(270deg, #DF8908 50.41%, #b415b4B4 90.25%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .contact-details {
+        gap: 30px
+    }
+
+    .contact-detail {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    .contact-detail p{
+        cursor: pointer;
+    }
+
+    .conatct-right label {
+        color: #d8d8d8;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .contact-right input {
+        border: none;
+        width: 700px;
+        height: 40px;
+        padding-left: 20px;
+        border-radius: 4px;
+        background-color: #32323c;
+        color: #a0a0a0;
+        font-family: outfit;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .text-area {
+        border: none;
+        width: 650px;
+        height: 250px;
+        padding-left: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #32323c;
+        color: #a0a0a0;
+        font-family: outfit;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .contact-submit {
+        border: none;
+        color: white;
+        border-radius: 50px;
+        background: linear-gradient(270deg, #DF8908 50.41%, #b415b4B4 90.25%);
+        font-size: 22px;
+        font-weight: 600;
+        padding: 16px 40px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .contact-submit:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer hr {
+        width: 100%;
+        background-color: #fff;
+    }
+
+    .footer-subscribe {
+        font-size: 20px;
+        padding: 16px 40px;
+        border-radius: 50px;
+        background: linear-gradient(270deg, #DF8908 50.41%, #b415b4B4 90.25%);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .footer-subscribe:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+    .nav-line {
+            outline: none;
+            border: none;
+            height: 4PX;
+            border-radius: 40px;
+            background: linear-gradient(264deg, #DF8908 -5.09%, #b415b4 106.28%);
+    }
 }
+
+

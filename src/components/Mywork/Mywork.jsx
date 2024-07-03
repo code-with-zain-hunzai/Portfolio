@@ -3,7 +3,7 @@ import { workData } from './workData';
 import { FaArrowRightLong } from "react-icons/fa6";
 const Mywork = () => {
     return (
-        <div className='mywork flex flex-col justify-center items-center gap-20'>
+        <div id='portfolio' className='mywork flex flex-col justify-center items-center gap-20'>
             <div className='mywork-title'>
                 <h1 className='text-4xl font-bold '>My latest work</h1>
             </div>
