@@ -1,15 +1,70 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { IoLocationSharp } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-    const [result, setResult] = React.useState("");
+    const [result, setResult] = useState("");
+    const [nameError, setNameError] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [messageError, setMessageError] = useState("");
+
+    const validateEmail = (email) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    };
+
+    const handleNameChange = (event) => {
+        const name = event.target.value;
+        if (name.length >= 3) {
+            setNameError('');
+        }
+    };
+
+    const handleEmailChange = (event) => {
+        const email = event.target.value;
+        if (validateEmail(email)) {
+            setEmailError('');
+        }
+    };
+
+    const handleMessageChange = (event) => {
+        const message = event.target.value;
+        if (message.length >= 11) {
+            setMessageError('');
+        }
+    };
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Sending....");
+
         const formData = new FormData(event.target);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        let valid = true;
+
+        if (name.length < 3) {
+            setNameError('Name must be at least 3 characters long.');
+            valid = false;
+        }
+
+        if (!validateEmail(email)) {
+            setEmailError('Invalid email format.');
+            valid = false;
+        }
+
+        if (message.length < 11) {
+            setMessageError('Message must be at least 11 characters long.');
+            valid = false;
+        }
+
+        if (!valid) {
+            setResult("");
+            return;
+        }
 
         formData.append("access_key", "3e55aee4-5c14-4cb8-b945-dfa81252a6e0");
 
@@ -35,7 +90,7 @@ const Contact = () => {
             setResult("Error submitting the form");
             toast.error('Form submission failed.');
         }
-    }
+    };
 
     return (
         <>
@@ -83,13 +138,19 @@ const Contact = () => {
                         </div>
                     </div>
                     <form onSubmit={onSubmit} className="contact-right flex flex-col items-start gap-7">
-                        <label htmlFor="">Your Name</label>
-                        <input type="text" name='name' placeholder='Enter your name' />
-                        <label htmlFor="">Your Email</label>
-                        <input type="email" name='email' placeholder='Enter your email' />
-                        <label htmlFor="">Write your message here</label>
-                        <textarea className='text-area resize-none' name="message" id="" placeholder='Enter your message'></textarea>
-                        <button type='submit' className='contact-submit'>Submit-now</button>
+                        <label htmlFor="name">Your Name</label>
+                        <input type="text" name='name' placeholder='Enter your name' required onChange={handleNameChange} />
+                        {nameError && <p className='text-red-500'>{nameError}</p>}
+                        
+                        <label htmlFor="email">Your Email</label>
+                        <input type="email" name='email' placeholder='Enter your email' required onChange={handleEmailChange} />
+                        {emailError && <p className='text-red-500'>{emailError}</p>}
+                        
+                        <label htmlFor="message">Write your message here</label>
+                        <textarea className='text-area resize-none' name="message" placeholder='Enter your message' required onChange={handleMessageChange}></textarea>
+                        {messageError && <p className='text-red-500'>{messageError}</p>}
+                        
+                        <button type='submit' className='contact-submit'>Submit Now</button>
                     </form>
                 </div>
                 <div className="result-message">
