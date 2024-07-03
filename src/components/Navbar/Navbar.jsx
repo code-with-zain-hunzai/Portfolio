@@ -7,8 +7,8 @@ const Navbar = () => {
 
     const [menu, setmenu] = useState("home")
     return (
-        <div className='w-full'>
-            <div className='navbar flex justify-between items-center w-[90%] mx-auto mt-5'>
+        <div className='w-full fixed bg-fuchsia-900'>
+            <div className='navbar flex justify-between items-center w-[90%] mx-auto my-3'>
                 <img src={zain} alt="" />
                 <ul className="nav-menu flex items-center list-none gap-16 text-lg">
                     <li className='hover:cursor-pointer'> <AnchorLink className='anchor-link ' offset={50} href='#home'><p onClick={() => setmenu("home")}>Home</p></AnchorLink>{menu === "home" ? <hr className='nav-line' /> : <></>}</li>
