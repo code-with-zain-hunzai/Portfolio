@@ -140,7 +140,7 @@ body {
         font-size: 22px;
     }
 
-    .contact-detail p{
+    .contact-detail p {
         cursor: pointer;
     }
 
@@ -218,13 +218,60 @@ body {
         transform: scale(1.1);
         transition: 0.3s;
     }
+
     .nav-line {
-            outline: none;
-            border: none;
-            height: 4PX;
-            border-radius: 40px;
-            background: linear-gradient(264deg, #DF8908 -5.09%, #b415b4 106.28%);
+        outline: none;
+        border: none;
+        height: 4PX;
+        border-radius: 40px;
+        background: linear-gradient(264deg, #DF8908 -5.09%, #b415b4 106.28%);
     }
+
+    .nav-mob-open {
+        display: none;
+    }
+    
+    .nav-mob-close {
+        display: none;
+    }
+    
+    @media(max-width: 768px) {
+        .nav-mob-open {
+            display: block;
+            position: fixed;
+            right: 30px;
+            z-index: 3;
+        }
+    
+        .nav-mob-close {
+            display: block;
+            position: fixed;
+            top: 15px;
+            right: 30px;
+            width: 30px;
+            z-index: 3; 
+        }
+    
+        .nav-menu {
+            position: fixed;
+            flex-direction: column;
+            align-items: center;
+            top: 0;
+            gap: 30px;
+            background-color: #1f0016;
+            width: 350px;
+            height: 65%;
+            z-index: 2;
+            transition: right 0.5s;
+            right: -350px;
+        }
+    
+        .nav-menu li {
+            padding-top: 50px;
+            font-size: 20px;
+            flex-direction: column;
+        }
+    }
+    
+    
 }
-
-
