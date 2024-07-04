@@ -19,7 +19,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='w-full fixed lg:bg-fuchsia-900'>
+        <div className='w-full'>
             <div className='navbar flex justify-between items-center w-[90%] mx-auto my-3'>
                 <img src={zain} alt="Logo" />
                 <div onClick={openMenu} className={`nav-mob-open block lg:hidden ${isMenuOpen ? 'hidden' : 'block'}`}>

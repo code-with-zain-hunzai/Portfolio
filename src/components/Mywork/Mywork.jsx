@@ -3,16 +3,16 @@ import { workData } from './workData';
 import { FaArrowRightLong } from "react-icons/fa6";
 const Mywork = () => {
     return (
-        <div id='portfolio' className='mywork flex flex-col justify-center items-center gap-20'>
-            <div className='mywork-title'>
+        <div id='portfolio' className='mywork flex flex-col justify-center items-center gap-20 overflow-hidden'>
+            <div data-aos="fade-left" className='mywork-title'>
                 <h1 className='text-4xl font-bold '>My latest work</h1>
             </div>
-            <div className="mywork-container grid grid-cols-2 lg:grid-cols-3">
+            <div data-aos="fade-left" className="mywork-container grid grid-cols-2 lg:grid-cols-3">
                 {workData.map((work, index) => {
                     return <img key={index} src={work.w_img} alt="" />
                 })}
             </div>
-            <div className="mywork-showmore flex gap-4 border border-white items-center px-7 py-5 rounded-full cursor-pointer font-semibold text-xl mb-20 transition">
+            <div data-aos="fade-right" className="mywork-showmore flex gap-4 border border-white items-center px-7 py-5 rounded-full cursor-pointer font-semibold text-xl mb-20 transition">
                 <p>Show More</p>
                 <FaArrowRightLong />
             </div>

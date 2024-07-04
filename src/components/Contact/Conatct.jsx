@@ -106,7 +106,7 @@ const Contact = () => {
                 pauseOnHover
                 theme="light"
             />
-            <div id='contact' className='Contact flex flex-col justify-center items-center gap-20'>
+            <div data-aos="fade-right" id='contact' className='Contact flex flex-col justify-center items-center gap-20 overflow-hidden'>
                 <div className="contact-title">
                     <h1 className='font-semibold text-4xl'>Get in touch</h1>
                 </div>
