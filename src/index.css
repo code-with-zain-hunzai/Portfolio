@@ -67,14 +67,6 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
-    .services-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 40px;
-        margin-bottom: 80px;
-    }
-
     .services-format h2 {
         background: linear-gradient(270deg, #DF8908 50.41%, #b415b4B4 90.25%);
         background-clip: text;
@@ -195,11 +187,6 @@ body {
         transition: 0.3s;
     }
 
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .footer hr {
         width: 100%;
         background-color: #fff;
@@ -235,7 +222,7 @@ body {
         display: none;
     }
     
-    @media(max-width: 768px) {
+    @media(max-width: 1024px) {
         .nav-mob-open {
             display: block;
             position: fixed;
@@ -273,5 +260,16 @@ body {
         }
     }
     
+    @media(max-width:768px) {
+        .contact-right input {
+            width: 400px;
+            height: 40px;
+        }
+    
+        .text-area {
+            width: 350px;
+            height: 250px;
+        }  
+    }
     
 }

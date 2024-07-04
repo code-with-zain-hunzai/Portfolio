@@ -110,7 +110,7 @@ const Contact = () => {
                 <div className="contact-title">
                     <h1 className='font-semibold text-4xl'>Get in touch</h1>
                 </div>
-                <div className="contact-section flex gap-36">
+                <div className="contact-section lg:flex gap-36">
                     <div className="contact-left flex flex-col gap-7">
                         <h1>Let's talk</h1>
                         <p className='max-w-[550px] text-xl text-[#D8D8D8]'>I specialize in React, Next.js, Tailwind CSS, and creating responsive, user-friendly web designs. Let's bring your vision to life!</p>

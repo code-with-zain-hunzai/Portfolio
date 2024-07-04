@@ -7,7 +7,7 @@ const Mywork = () => {
             <div className='mywork-title'>
                 <h1 className='text-4xl font-bold '>My latest work</h1>
             </div>
-            <div className="mywork-container">
+            <div className="mywork-container grid grid-cols-2 lg:grid-cols-3">
                 {workData.map((work, index) => {
                     return <img key={index} src={work.w_img} alt="" />
                 })}

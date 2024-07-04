@@ -8,7 +8,7 @@ const Services = () => {
             <div className='services-title'>
                 <h1 className='text-4xl font-semibold'>My Services</h1>
             </div>
-            <div className='services-container'>
+            <div className='services-container grid grid-cols-2 lg:grid-cols-3 gap-3  lg:gap-10 mb-10'>
                 {ServicesData.map((service, index) => (
                     <div key={index} className="services-format flex flex-col justify-center gap-5 p-14 border border-white rounded-lg transition-all cursor-pointer">
                         <h3 className='font-semibold text-3xl'>{service.serviceNo}</h3>

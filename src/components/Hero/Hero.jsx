@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div id='home' className='hero flex items-center flex-col gap-7'>
       <img className='mt-32 w-72 rounded-full' src={hero} alt="" />
-      <h1 className='w-[70%] md:text-5xl 2xl:text-8xl text-center font-medium'>
+      <h1 className='w-[90%] lg:w-[70%] text-3xl lg:md:text-5xl 2xl:text-8xl text-center font-medium'>
         <span
           style={{
             backgroundImage: 'linear-gradient(267deg, #AD7C25 0.36%, #B923E1 102.06%)',
@@ -18,8 +18,8 @@ const Hero = () => {
           I'm Zain,
         </span>
         FrontEnd Developer base on pakistan</h1>
-      <p className='text-xl w-[50%] text-center'>I am a FrontEnd Developer from hunza with the 3-4 years of experience.</p>
-      <div className='hero-action flex items-center gap-6 text-xl mb-12 font-medium'>
+      <p className='text-md lg:text-xl w-3/5 lg:w-[50%] text-center'>I am a FrontEnd Developer from hunza with the 3-4 years of experience.</p>
+      <div className='hero-action flex items-center gap-3 lg:gap-6 lg:text-xl mb-12 font-medium'>
         <div className="hero-connect px-5 py-3  rounded-full"
         style={{background:'linear-gradient(267deg, #AD7C25 0.36%, #B923E1 102.06%)'}}>
            <AnchorLink className='anchor-link ' offset={50} href='#contact'>
