@@ -82,14 +82,14 @@ body {
 
     .mywork-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         gap: 40px;
     }
 
     .mywork-container img {
         box-sizing: border-box;
-        width: 419px;
-        height: 200px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
         border-radius: 10px;
         transition: 0.3s;
         cursor: pointer;
@@ -99,11 +99,6 @@ body {
         transform: scale(1.10);
         border: 2px solid fuchsia;
         transition: 0.3s;
-    }
-
-    .mywork-showmore:hover {
-        gap: 30px;
-        transition: 0.5s;
     }
 
     .loaction:hover {
