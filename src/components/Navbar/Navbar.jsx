@@ -3,7 +3,7 @@ import zain from '../../assets/zain.svg';
 import { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const Navbar = () => {
+const Navbar = ({darkMode,toggleDarkMode}) => {
     const [menu, setMenu] = useState("home");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef();
@@ -74,6 +74,12 @@ const Navbar = () => {
                         Connect with me
                     </AnchorLink>
                 </div>
+                <button
+                    className="text-white border px-4 py-1 font-bold hover:bg-gray-700"
+                    onClick={toggleDarkMode}
+                >
+                    {darkMode ? 'Light Mode' : 'Dark Mode'}
+                </button>
             </div>
         </div>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
@@ -8,16 +9,21 @@ import Conatct from './components/Contact/Conatct';
 import Footer from './components/Footer/Footer';
 
 const App = () => {
+  const [darkMode, setdarkMode] = useState(false)
+
+  const toggleDarkMode = () => {
+    setdarkMode(!darkMode)
+  }
   return (
-    <div>
-      <Navbar />
+    <div className={`${darkMode ? ' bg-gray-900 text-white' : 'bg-white text-black'}`}>
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <div className='w-[90%] mx-auto'>
-      <Hero />
-      <About/>
-      <Services/>
-      <Mywork/>
-      <Conatct/>
-      <Footer/>
+        <Hero />
+        <About />
+        <Services />
+        <Mywork />
+        <Conatct />
+        <Footer />
       </div>
     </div>
   )

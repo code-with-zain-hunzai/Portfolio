@@ -241,7 +241,7 @@ body {
             gap: 30px;
             background-color: #1f0016;
             width: 350px;
-            height: 65%;
+            height: 75%;
             z-index: 2;
             transition: right 0.5s;
             right: -350px;
