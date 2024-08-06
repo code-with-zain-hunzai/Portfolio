@@ -1,9 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import zain from '../../assets/zain.svg';
-import { useState } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { MdOutlineLightMode } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 
-const Navbar = ({darkMode,toggleDarkMode}) => {
+const Navbar = ({ darkMode, toggleDarkMode }) => {
     const [menu, setMenu] = useState("home");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef();
@@ -19,8 +20,8 @@ const Navbar = ({darkMode,toggleDarkMode}) => {
     };
 
     return (
-        <div className='w-full'>
-            <div className='navbar flex justify-between items-center w-[90%] mx-auto my-3'>
+        <div className='w-full bg-gray-900'>
+            <div className='navbar  flex justify-between items-center w-[90%] mx-auto py-3'>
                 <img src={zain} alt="Logo" />
                 <div onClick={openMenu} className={`nav-mob-open block lg:hidden ${isMenuOpen ? 'hidden' : 'block'}`}>
                     <lord-icon
@@ -68,21 +69,25 @@ const Navbar = ({darkMode,toggleDarkMode}) => {
                         {menu === "contact" && <hr className='nav-line' />}
                     </li>
                 </ul>
+                <div className='flex'>
                 <div className="nav-connect hidden lg:block px-4 py-2 rounded-3xl cursor-pointer text-lg transform transition-transform duration-500 hover:scale-105"
                     style={{ backgroundImage: 'linear-gradient(267deg, #AD7C25 0.36%, #B923E1 102.06%)' }}>
                     <AnchorLink className='anchor-link' offset={50} href='#contact'>
                         Connect with me
                     </AnchorLink>
+                    
                 </div>
                 <button
-                    className="text-white border px-4 py-1 font-bold hover:bg-gray-700"
+                    className="px-4 absolute top-4 right-14 md:top-5 md:right-2  items-center"
                     onClick={toggleDarkMode}
                 >
-                    {darkMode ? 'Light Mode' : 'Dark Mode'}
+                    {darkMode ? <FaMoon size={25} color='black'   /> :<MdOutlineLightMode size={25} color='white' />}
                 </button>
+                </div>
+                
             </div>
         </div>
     );
-}
+};
 
 export default Navbar;

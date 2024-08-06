@@ -15,8 +15,9 @@ const App = () => {
     setdarkMode(!darkMode)
   }
   return (
-    <div className={`${darkMode ? ' bg-gray-900 text-white' : 'bg-white text-black'}`}>
+    <div >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <div className={`${darkMode ? ' bg-gray-900 text-white' : 'bg-white text-black'}`}>
       <div className='w-[90%] mx-auto'>
         <Hero />
         <About />
@@ -24,6 +25,7 @@ const App = () => {
         <Mywork />
         <Conatct />
         <Footer />
+      </div>
       </div>
     </div>
   )
